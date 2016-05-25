@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  # Root route set to home action
+  root 'pages#home'
   # If there's a GET request for home, send it to pages controller with home action.
   get '/home', to: 'pages#home'
   
