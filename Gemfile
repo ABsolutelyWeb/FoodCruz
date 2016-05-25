@@ -52,6 +52,7 @@ group :development, :test do
   gem 'pry'
 end
 
+# Heroku will use production version and skip development version
 group :production do
   # Use PostgreSQL for production
   gem 'pg'
