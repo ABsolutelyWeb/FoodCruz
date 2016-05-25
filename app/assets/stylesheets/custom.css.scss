@@ -1,59 +1,16 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-// Jumbotron centering for text
-.center-jumbo {
-  text-align: center;
-  margin-top: -0.1em;
-  margin-bottom: 0.4em;
+#homepage-title {
+  font-size: 14em;
+  font-family: "Courgette";
+  text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
 }
 
-// Spacing between header tags
-h2, h3, h4, h5, h6 {
-  line-height: 1;
+#homepage-subtitle {
+  font-family: 'Poiret One';
+  margin-top: -0.6em;
 }
-
-// FoodCruz title on home page
-#home-title {
-  font-size: 9em;
-  letter-spacing: -1px;
-  margin-top: -0.2em;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-// FoodCruz subtitle on home page
-#home-subtitle {
-  margin-bottom: 1em;
-}
-
-// Adjust user options below Jumbotron
-.align-home-row-blocks-left {
-  margin-top: -0.2em;
-  margin-bottom: 0.7em;
-  text-align: left;
-  letter-spacing: 0.5px;
-}
-
-// Homepage sign-up button inside Jumbotron
-.homepage-sign-up-button {
-  margin-bottom: -0.2em;
-}
-
-// Options titles
-.home-user-options {
-  margin-bottom: 0.7em;
-}
-
-// Footer positioning
-.footer.position {
-  margin-top: 1.5em;
-  border-top: 1px solid #eaeaea;
-  color: #777;
-}
-
-
-
 
 
 
