@@ -4,14 +4,77 @@
 #homepage-title {
   font-size: 14em;
   font-family: "Courgette";
+  color: rgba(255,255,255,0.9);
   text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
 }
+
+@media only screen and (max-width: 980px) {
+    #homepage-title {
+        font-size: 12em;
+    }
+}
+
+@media only screen and (max-width: 860px) {
+    #homepage-title {
+        font-size: 10em;
+    }
+}
+
+@media only screen and (max-width: 710px) {
+    #homepage-title {
+        font-size: 8em;
+    }
+}
+
+@media only screen and (max-width: 595px) {
+    #homepage-title {
+        font-size: 6em;
+    }
+}
+
+@media only screen and (max-width: 435px) {
+    #homepage-title {
+        font-size: 5em;
+    }
+}
+
+@media only screen and (max-width: 389px) {
+    #homepage-title {
+        font-size: 4em;
+    }
+}
+
 
 #homepage-subtitle {
   font-family: 'Poiret One';
   margin-top: -0.6em;
 }
 
+@media only screen and (max-width: 710px) {
+    #homepage-subtitle {
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (max-width: 435px) {
+    #homepage-subtitle {
+        font-size: 1.2em;
+    }
+}
+
+@media only screen and (max-width: 389px) {
+    #homepage-subtitle {
+        font-size: 1em;
+    }
+}
+
+.new-board-btn {
+    white-space: normal;
+}
+
+.responsive-width {
+    font-size: 3vw;
+}
 
 
 
