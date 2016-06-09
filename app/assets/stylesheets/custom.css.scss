@@ -6,6 +6,7 @@
   font-family: "Courgette";
   color: rgba(255,255,255,0.9);
   text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+  margin-top: -0.1em;
 }
 
 @media only screen and (max-width: 980px) {
@@ -44,10 +45,10 @@
     }
 }
 
-
 #homepage-subtitle {
   font-family: 'Poiret One';
   margin-top: -0.6em;
+  margin-bottom: -1em;
 }
 
 @media only screen and (max-width: 710px) {
@@ -79,8 +80,6 @@
 
 
 
-
-
 @import url(https://fonts.googleapis.com/css?family=Questrial);
 
 html,body {
@@ -91,20 +90,7 @@ html,body {
     font-family: 'Questrial', sans-serif;
 }
 
-@media (min-width:768px) {
-    h1 {
-        font-size:68px;
-    }
-}
-
-a {
-    color:#999;
-}
-
-a:hover {
-    color:#111;
-}
-
+// Sharpness of corners
 .btn,.well,.panel {
     border-radius:0;
 }
@@ -115,99 +101,23 @@ a:hover {
     color:#fff;
 }
 
-.text-danger, a.text-danger {
-    color:#5491bd;
-}
-
 .btn-huge {
     padding:17px 22px;
     font-size:22px;
 }
 
-.icon-bar {
-	background-color:#fff;
-}
-
-.navbar-trans {
-	background-color:#2b2b2b;
-    color:#cdcdcd;
-    border-width:0;
-}
-
-.navbar-trans .navbar-brand, .navbar-trans >.container-fluid .navbar-brand {
-    padding: 14px;
-    color:#5491bd;
-}
-
-.navbar-trans li>a:focus,.navbar-trans li.active {
-	background-color:#5491bd;
-	color:#333;
-}
-
-.navbar-trans li>a:hover {
-	background-color:#5491bd;
-	color:#fff;
-	opacity:0.5;
-}
-
-.navbar-trans a{
-    color:#cdcdcd;
-    letter-spacing:1px;
-}
-
-.navbar-trans .form-control:focus {
-	border-color: #eee;
-	outline: 0;
-	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(100,100,100,0.6);
-	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(100,100,100,0.6);
-}
-
-.scroll-down {
-  position: absolute;
-  left: 50%;
-  bottom: 40px;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;
-  margin-left: -15px;
-  display: block;
-  padding: 7px;
-  text-align: center;
-  z-index:-1
-}
-
-.scroll-up {
-  position: fixed;
-  display: none;
-  z-index: 999;
-  bottom: 1.75em;
-  right: 2em;
-}
-
-.scroll-up a {
-  background-color: rgba(135, 135, 135, 0.5);
-  display: block;
-  width: 35px;
-  height: 35px;
-  text-align: center;
-  color: #fff;
-  font-size: 15px;
-  line-height: 30px;
-}
-
 section {
-	padding-top:70px;  
-  padding-bottom:50px;
-  min-height:100%;
-  min-height:calc(100% - 0);
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d;
+    padding-top:70px;  
+    padding-bottom:50px;
+    min-height:100%;
+    min-height:calc(100% - 0);
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
 }
 
 #choices-banner {
-  min-height:50%;
+    min-height:50%;
 }
 
 @media (min-width:768px) {
@@ -219,53 +129,29 @@ section {
     }
 }
   
-#section1, #section3 {
+#section1 {
 	background-color: rgba(0,0,0,0.7);
 	color:#fff;
 }
-  
-#section4 {
-	background-color: #f6f6f6;
-	color:#444;
-}
-  
-#section3 {
-	background-color: rgba(0,0,0,0.9);
+
+.panel-text {
+    color: white;
+    font-size: 1.4em;
+    font-family: 'Poiret One';
 }
 
-#section5 {
-	background-color: #fff;
+.panel-heading {
+    font-family: "Courgette";
 }
 
-#section6 {
-  background-color: #eee;
-	min-height:130px;
-	padding-top:40px;
-	padding-bottom:40px;
+.panel-color {
+    background: rgba(0,0,0,0.4);
+    text-shadow: 2px 2px 30px rgba(150, 150, 150, 0.89);
+    border-radius: 18%;
+    border-color: rgba(0,0,0,0);
 }
 
-#section7 {
-	background-color: #5491bd;
-	color: #f6f6f6;
-	min-height:130px;
-	padding-top:40px;
-	padding-bottom:40px;
-}
-
-footer {
-	background-color:#2b2b2b;
-    color:#ddd;
-    min-height:100px;
-    padding-top:20px;
-    padding-bottom:40px;
-}
-
-footer .nav>li>a {
-    padding: 3px;
-    color: #5491bd;
-}
-
-footer .nav>li>a:hover {
-    background-color:transparent;
-	color:#fff;
+.hr-color {
+    border-color: rgba(255,255,255,0.2);
+    width: 75%;
 }
