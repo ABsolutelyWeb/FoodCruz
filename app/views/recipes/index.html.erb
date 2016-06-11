@@ -1,0 +1,25 @@
+<h1 class="container">Santa Cruz Recipes</h1>
+<hr>
+
+<div class="container">
+  <% @recipes.each do |recipe| %>
+    <div class="row">
+      <div class="col-lg-8 well">
+        <div class="col-md-2">
+          <section class="chef_info center">
+            <%= gravatar_for recipe.chef, size: 100%>
+          </section>
+        </div>
+        <h4><%= link_to recipe.name, " ", class: "show-page-link"%></h4>
+        <p><%= recipe.summary %></p>
+        <p>
+          <span class="quiet">
+            <small>Chef <%= recipe.chef.chefname %></small><br>
+            <small><%= time_ago_in_words(recipe.created_at) %> ago</small>    
+          </span>
+        </p>
+        
+      </div>
+    </div>
+  <% end %>
+</div>

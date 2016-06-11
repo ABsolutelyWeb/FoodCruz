@@ -1,12 +1,14 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 #homepage-title {
   font-size: 14em;
   font-family: "Courgette";
   color: rgba(255,255,255,0.9);
   text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
-  margin-top: -0.1em;
+  margin-top: -0.2em;
 }
 
 @media only screen and (max-width: 980px) {
@@ -84,7 +86,7 @@
 
 html,body {
 	height:100%;
-    background:center no-repeat fixed url('https://images.unsplash.com/photo-1460819739742-50e4486578f5?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=8e24d9ab5575447f2ca40b3a5c20ce54');
+    background:center no-repeat fixed url('background.jpg');
     background-size: cover;
     color:#444;
     font-family: 'Questrial', sans-serif;
@@ -130,7 +132,7 @@ section {
 }
   
 #section1 {
-	background-color: rgba(0,0,0,0.7);
+// 	background-color: rgba(0,0,0,0.7);
 	color:#fff;
 }
 
@@ -154,4 +156,17 @@ section {
 .hr-color {
     border-color: rgba(255,255,255,0.2);
     width: 75%;
+}
+
+.gravatar {
+    display: inline;
+    margin-top: 0.7em;
+}
+
+.chef_info {
+    display: inline;
+}
+
+.show-page-link {
+    text-decoration: none !important;
 }
