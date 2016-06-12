@@ -10,7 +10,7 @@
             <%= gravatar_for recipe.chef, size: 100%>
           </section>
         </div>
-        <h4><%= link_to recipe.name, " ", class: "show-page-link"%></h4>
+        <h4><%= link_to recipe.name, recipe_path(recipe), class: "show-page-link"%></h4>
         <p><%= recipe.summary %></p>
         <p>
           <span class="quiet">

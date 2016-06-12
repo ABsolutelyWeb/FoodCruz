@@ -3,6 +3,10 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+a {
+   outline: 0;
+}
+
 #homepage-title {
   font-size: 14em;
   font-family: "Courgette";
@@ -161,6 +165,7 @@ section {
 .gravatar {
     display: inline;
     margin-top: 0.7em;
+    border-radius: 25%;
 }
 
 .chef_info {
@@ -169,4 +174,36 @@ section {
 
 .show-page-link {
     text-decoration: none !important;
+}
+
+.white-text {
+    color: white;
+}
+
+.show-page-gravatar {
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4em;
+}
+
+.centered {
+    text-align: center;
+}
+
+.btn-position {
+    margin-left: -0.65em;
+}
+
+.outline-remove {
+    outline: 0 !important;
+}
+
+#navbar-title {
+    font-size: 2em;
+    font-family: "Courgette";
+    color: rgba(255,255,255,0.9);
+    text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+    margin-top: 0.5em;
 }
