@@ -218,3 +218,33 @@ section {
 .author-name {
     font-size: 1.2em;
 }
+
+.well {
+
+}
+
+input, textarea, select, .uneditable-input {
+    border: 1px solid #d2d2d2;
+    width: 100%;
+    margin-bottom: 3em;
+}
+
+// input {
+//     height: auto !important;
+// }
+
+.recipedesc {
+    height: 8em;
+}
+
+.summarytime {
+    height: 4em;
+}
+
+.recipename {
+    height: 3em;
+}
+
+.alert-properties {
+    margin-left: 1.5em;
+}

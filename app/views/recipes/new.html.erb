@@ -1,0 +1,35 @@
+<p>
+  <h1>Create new recipe</h1>
+  <hr>
+</p>
+
+<% if @recipe.errors.any? %>
+  <div class="row">
+    <div class="alert alert-danger col-md-8 col-md-offset-2">
+      <a class="close" data-dismiss="alert">&#215;</a>
+      <h5>The follow errors occurred: </h5>
+      <ul>
+        <% @recipe.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+<% end %>
+
+<div class="row">
+  <div class="well col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+    <%= form_for @recipe do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name, class: "recipename", placeholder: "  Recipe Name" %>
+      
+      <%= f.label :summary %>
+      <%= f.text_area :summary, class: "summarytime", placeholder: "  Tell us about your recipe." %>
+      
+      <%= f.label :description %>
+      <%= f.text_area :description, class: "recipedesc", placeholder: "  How do you make it?" %>
+    
+      <%= f.submit "Create Recipe", class: "btn btn-success" %>
+    <% end %>
+  </div>
+</div>
