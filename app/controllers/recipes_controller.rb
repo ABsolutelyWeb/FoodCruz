@@ -19,6 +19,9 @@ class RecipesController < ApplicationController
     # A recipe must be associated with a chef. For
     # now, we will assign every recipe to user 2 
     # (Abhishek Gupta).
+    # NOTE: This line is for testing purposes and
+    # must NOT be deleted. Will be commented out 
+    # in final release.
     @recipe.chef = Chef.find(1)
     
     # If the recipe was successfully saved to the

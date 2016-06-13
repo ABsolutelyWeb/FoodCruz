@@ -219,8 +219,14 @@ section {
     font-size: 1.2em;
 }
 
-.well {
+.showpage-title {
+    margin-top: 2em;
+}
 
+@media (max-width:767px) {
+    .spacer {
+        margin-top: 2em;
+    }
 }
 
 input, textarea, select, .uneditable-input {
@@ -247,4 +253,19 @@ input, textarea, select, .uneditable-input {
 
 .alert-properties {
     margin-left: 1.5em;
+}
+
+.btn-newpage-link {
+    margin-bottom: 3em;
+    margin-top: -0.5em;
+    margin-right: 1.8em;
+}
+
+.recipes-title {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    font-size: 5em;
+    font-family: "Courgette";
+    color: rgba(255,255,255,0.9);
+    text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
 }

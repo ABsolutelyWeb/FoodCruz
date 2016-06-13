@@ -47,7 +47,7 @@
 }
 
 #page-content-wrapper {
-    width: 100%;
+    /*width: 100%;*/
     position: absolute;
     padding: 15px;
 }
@@ -135,6 +135,11 @@
 
 #menu-toggle {
   margin-bottom: -2em;
+  margin-top: 2em !important;
   outline: 0;
   text-decoration: none;
+}
+
+#page-content-wrapper {
+    display: inline !important;
 }
