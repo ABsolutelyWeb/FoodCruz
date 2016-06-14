@@ -252,13 +252,30 @@ input, textarea, select, .uneditable-input {
 }
 
 .alert-properties {
-    margin-left: 1.5em;
+    margin-left: 1.4em;
+    margin-top: 1em;
+    z-index: -1 !important;
+    display: inline-block !important;
+}
+
+.errors {
+    margin-top: 1em;
+    z-index: -1 !important;
+    display: inline-block !important;
 }
 
 .btn-newpage-link {
     margin-bottom: 3em;
     margin-top: -0.5em;
     margin-right: 1.8em;
+    outline: 0 !important;
+}
+
+.btn-edit-show {
+    margin-bottom: 3em;
+    margin-top: -2.5em;
+    margin-right: 1.8em;
+    outline: 0 !important;    
 }
 
 .recipes-title {
@@ -268,4 +285,8 @@ input, textarea, select, .uneditable-input {
     font-family: "Courgette";
     color: rgba(255,255,255,0.9);
     text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+}
+
+.show-positioning {
+    margin-top: 2em;
 }

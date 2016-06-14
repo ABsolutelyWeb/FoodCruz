@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="well col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+    <%= form_for @recipe do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name, class: "recipename", placeholder: "  Recipe Name" %>
+      
+      <%= f.label :summary %>
+      <%= f.text_area :summary, class: "summarytime", placeholder: "  Tell us about your recipe." %>
+      
+      <%= f.label :description %>
+      <%= f.text_area :description, class: "recipedesc", placeholder: "  How do you make it?" %>
+    
+      <%= f.submit(@recipe.new_record? ? "Create Recipe" : "Update Recipe", class: "btn btn-success") %>
+    <% end %>
+  </div>
+</div>

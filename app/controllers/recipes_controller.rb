@@ -40,7 +40,7 @@ class RecipesController < ApplicationController
   end  
   
   def edit
-    
+    @recipe = Recipe.find(params[:id])
   end
   
   def show
@@ -48,7 +48,14 @@ class RecipesController < ApplicationController
   end
   
   def update
-    
+    @recipe = Recipe.find(params[:id])
+    if @recipe.update(recipe_params)
+      flash[:success] = "Your recipe was updated."
+      redirect_to recipe_path(@recipe)
+    else
+      render :edit
+      flash[:danger] = "Something went wrong. The recipe was not updated."
+    end
   end
   
   def destroy

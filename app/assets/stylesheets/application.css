@@ -135,11 +135,11 @@
 
 #menu-toggle {
   margin-bottom: -2em;
-  margin-top: 2em !important;
+  /*margin-top: 2em !important;*/
   outline: 0;
   text-decoration: none;
 }
 
 #page-content-wrapper {
-    display: inline !important;
+    display: inline-block !important;
 }
