@@ -67,6 +67,6 @@ class RecipesController < ApplicationController
     def recipe_params
       # Whitelist all relevant parameters to pass through from form 
       # submission.
-      params.require(:recipe).permit(:name, :summary, :description)
+      params.require(:recipe).permit(:name, :summary, :description, :picture)
     end
 end

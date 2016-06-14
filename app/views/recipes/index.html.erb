@@ -20,8 +20,10 @@
             <small><%= time_ago_in_words(recipe.created_at) %> ago</small>    
           </span>
         </p>
-        
       </div>
+      <!--<div class="col-md-4">-->
+        <%#= image_tag(recipe.picture.url, size: "250x150", class: "recipe-picture") if recipe.picture? %>
+      <!--</div>-->
     </div>
   <% end %>
 </div>

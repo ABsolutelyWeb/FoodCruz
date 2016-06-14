@@ -11,6 +11,9 @@
   <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
     <h3>Description: <br> <%= @recipe.summary%></h3>
   </div>
+  <div class="show-page-image">
+    <%= image_tag(@recipe.picture.url, class: "showpage-recipe-picture") if @recipe.picture? %>
+  </div>  
   <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
     <h3>Directions: <br> <%= simple_format(@recipe.description) %></h3>
   </div>

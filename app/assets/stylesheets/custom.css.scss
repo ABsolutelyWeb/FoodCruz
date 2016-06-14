@@ -290,3 +290,23 @@ input, textarea, select, .uneditable-input {
 .show-positioning {
     margin-top: 2em;
 }
+
+span.picture {
+    margin-top: 10px;
+    input {
+        border: 0;
+    }
+}
+
+.showpage-recipe-picture {
+    margin: 10px 10px 10px 10px;
+}
+
+.showpage-recipe-picture {
+    width: 25%;
+    height: auto;
+    margin-top: 1em;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
