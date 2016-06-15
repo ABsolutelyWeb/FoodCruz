@@ -15,6 +15,8 @@
         <i class="glyphicon glyphicon-thumbs-down"></i> &nbsp <%= @recipe.negative_votes %>
       <% end %>      
     </div>
+<%= social_share_button_tag("My Site") %>
+
   </div>
   <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
     <h3>Description: <br> <%= @recipe.summary%></h3>
