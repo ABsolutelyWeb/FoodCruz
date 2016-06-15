@@ -1,7 +1,7 @@
 class RecipesController < ApplicationController
   def index
     # Make all recipe objects (from DB) available in the index action.
-    @recipes = Recipe.all
+    @recipes = Recipe.all.sort_by{|votes| votes.positive_votes}.reverse
   end
   
   def new
@@ -60,6 +60,21 @@ class RecipesController < ApplicationController
   
   def destroy
     
+  end
+  
+  def vote
+    @recipe = Recipe.find(params[:id])
+    
+    # Do not remove. For debugging purposes.
+    vote = Vote.create(vote: params[:vote], chef: Chef.first, recipe: @recipe)
+    
+    if vote.valid?
+      flash[:success] = "Thank you for voting!"
+      redirect_to :back
+    else
+      flash[:danger] = "You can't vote more than once!"
+      redirect_to :back
+    end
   end
   
   private

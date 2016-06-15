@@ -40,7 +40,12 @@ Rails.application.routes.draw do
   
   
   # Do the above commented code, but in one line.
-  resources :recipes
+  # Also implemented voting.
+  resources :recipes do
+    member do
+      post 'vote'
+    end
+  end
   
   
   

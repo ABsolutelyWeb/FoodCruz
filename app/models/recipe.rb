@@ -2,6 +2,9 @@ class Recipe < ActiveRecord::Base
   # Each recipe would belong to a single chef.
   belongs_to :chef
   
+  # Recipes can have many votes, but only one vote per recipe per chef.
+  has_many :votes
+  
   # Ensure that every recipe has a chef_id so that logged out users cannot create 
   # any recipe entries.
   validates :chef_id, presence: true
@@ -18,6 +21,15 @@ class Recipe < ActiveRecord::Base
   mount_uploader :picture, PictureUploader
   
   validate :picture_size
+  
+  def positive_votes
+    self.votes.where(vote: true).size
+  end
+  
+  def negative_votes
+    self.votes.where(vote: false).size
+  end
+  
   private
     def picture_size
       if picture.size > 5.megabytes

@@ -20,6 +20,14 @@
             <small><%= time_ago_in_words(recipe.created_at) %> ago</small>    
           </span>
         </p>
+        <div class="pull-right col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-4 col-xs-offset-4 ">
+          <%= link_to vote_recipe_path(recipe, vote: true), method: :post do %>
+            <i class="glyphicon glyphicon-thumbs-up"></i> &nbsp <%= recipe.positive_votes %>
+          <% end %> &nbsp&nbsp&nbsp&nbsp
+          <%= link_to vote_recipe_path(recipe, vote: false), method: :post do %>
+            <i class="glyphicon glyphicon-thumbs-down"></i> &nbsp <%= recipe.negative_votes %>
+          <% end %>      
+        </div>
       </div>
       <!--<div class="col-md-4">-->
         <%#= image_tag(recipe.picture.url, size: "250x150", class: "recipe-picture") if recipe.picture? %>

@@ -7,6 +7,14 @@
       <h5 class="centered author-name">By <%= @recipe.chef.chefname %></h5>
     </p>
     <h1 class="centered show-page-title"><%= @recipe.name %></h1>
+    <div class="pull-left col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-4 col-xs-offset-4 ">
+      <%= link_to vote_recipe_path(@recipe, vote: true), method: :post do %>
+        <i class="glyphicon glyphicon-thumbs-up"></i> &nbsp <%= @recipe.positive_votes %>
+      <% end %> &nbsp&nbsp&nbsp&nbsp
+      <%= link_to vote_recipe_path(@recipe, vote: false), method: :post do %>
+        <i class="glyphicon glyphicon-thumbs-down"></i> &nbsp <%= @recipe.negative_votes %>
+      <% end %>      
+    </div>
   </div>
   <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
     <h3>Description: <br> <%= @recipe.summary%></h3>
