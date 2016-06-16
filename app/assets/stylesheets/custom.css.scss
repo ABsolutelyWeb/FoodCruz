@@ -179,6 +179,10 @@ section {
     position: absolute;
 }
 
+.paginate-ui {
+    margin-left: 15%;
+}
+
 .chef_info {
     display: inline;
 }
@@ -275,10 +279,10 @@ input, textarea, select, .uneditable-input {
     display: inline-block !important;
 }
 
-.btn-newpage-link {
-    margin-bottom: 3em;
-    margin-top: -0.5em;
-    margin-right: 1.8em;
+.btn-newrecipe-link {
+    display: block;
+    width: 9em;
+    margin: 0 auto;
     outline: 0 !important;
 }
 
@@ -291,7 +295,7 @@ input, textarea, select, .uneditable-input {
 
 .recipes-title {
     margin-top: 1em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.2em;
     font-size: 5em;
     font-family: "Courgette";
     color: rgba(255,255,255,0.9);

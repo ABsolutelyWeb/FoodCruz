@@ -1,10 +1,13 @@
-<%= link_to "Share a Recipe", new_recipe_path, class: "btn btn-primary btn-newpage-link pull-right" %>
 <br>
 
 <h1 class="container recipes-title centered">Santa Cruz Recipes</h1>
 
+<%= link_to "Share a Recipe", new_recipe_path, class: "btn btn-primary centered btn-newrecipe-link" %>
+
 <div class="container">
-  <%= will_paginate %>
+  <div class="paginate-ui">
+    <%= will_paginate %>
+  </div>
   <% @recipes.each do |recipe| %>
     <div class="row">
       <div class="well col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
@@ -38,5 +41,7 @@
       <!--</div>-->
     </div>
   <% end %>
-  <%= will_paginate %>
+  <div class="paginate-ui">
+    <%= will_paginate %>
+  </div>
 </div>
