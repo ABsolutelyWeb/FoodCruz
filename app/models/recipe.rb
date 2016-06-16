@@ -30,6 +30,11 @@ class Recipe < ActiveRecord::Base
     self.votes.where(vote: false).size
   end
   
+  # When active record communicates with database, the below line specifies
+  # to only pick up what it is specifying which is to display recipes by most
+  # recent on top.
+  default_scope -> { order(updated_at: :desc) }
+  
   private
     def picture_size
       if picture.size > 5.megabytes

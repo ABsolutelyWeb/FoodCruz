@@ -4,23 +4,26 @@
 <h1 class="container recipes-title centered">Santa Cruz Recipes</h1>
 
 <div class="container">
+  <%= will_paginate %>
   <% @recipes.each do |recipe| %>
     <div class="row">
       <div class="well col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
         <div class="col-md-2">
           <section class="chef_info center">
-            <%= gravatar_for recipe.chef, size: 100%>
+            <%= gravatar_for recipe.chef, size: 130%>
           </section>
         </div>
+        <div class="index-page-position-block">
         <h4><%= link_to recipe.name, recipe_path(recipe), class: "show-page-link"%></h4>
         <p><%= recipe.summary %></p>
         <p>
           <span class="quiet">
             <small>Chef <%= recipe.chef.chefname %></small><br>
-            <small><%= time_ago_in_words(recipe.created_at) %> ago</small>    
+            <small>Created <%= time_ago_in_words(recipe.created_at) %> ago</small><br>
+            <small>Updated <%= time_ago_in_words(recipe.updated_at) %> ago</small>    
           </span>
         </p>
-        <div class="pull-right col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-4 col-xs-offset-4 ">
+        <div class="vote-buttons">
           <%= link_to vote_recipe_path(recipe, vote: true), method: :post do %>
             <i class="glyphicon glyphicon-thumbs-up"></i> &nbsp <%= recipe.positive_votes %>
           <% end %> &nbsp&nbsp&nbsp&nbsp
@@ -28,10 +31,12 @@
             <i class="glyphicon glyphicon-thumbs-down"></i> &nbsp <%= recipe.negative_votes %>
           <% end %>      
         </div>
+        </div> 
       </div>
       <!--<div class="col-md-4">-->
         <%#= image_tag(recipe.picture.url, size: "250x150", class: "recipe-picture") if recipe.picture? %>
       <!--</div>-->
     </div>
   <% end %>
+  <%= will_paginate %>
 </div>

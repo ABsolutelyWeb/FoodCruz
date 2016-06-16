@@ -1,7 +1,13 @@
 class RecipesController < ApplicationController
   def index
     # Make all recipe objects (from DB) available in the index action.
-    @recipes = Recipe.all.sort_by{|votes| votes.positive_votes}.reverse
+    
+    # UNOPTIMIZED CODE
+    # @recipes = Recipe.all.sort_by{|votes| votes.positive_votes}.reverse
+    
+    # OPTIMIZED CODE
+    # Display recipe objects 5 at a time per page.
+    @recipes = Recipe.paginate(page: params[:page], per_page: 5)
   end
   
   def new
